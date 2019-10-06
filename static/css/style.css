@@ -1,0 +1,85 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font: 16px/1.5 'PT Sans', sans-serif;
+}
+
+.wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    height: 100%;
+    background: black;
+}
+
+.banner {
+    background: url("../images/cover.jpg") no-repeat center center;
+    background-size: cover;
+}
+
+.banner, .questionnaire {
+    color: #000;
+    text-align: center;
+    height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    font-size: 70px;
+    letter-spacing: 6px;
+    padding: 6rem 0 3rem 0;
+}
+
+.description {
+    font-size: 20px;
+    width: 40%;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+
+.button {
+    background: #212519;
+    border: none;
+    color: #fff;
+    font-weight: 700;
+    font-size: 17px;
+    border-radius: 5%;
+    padding: 0.7em 1em;
+    margin: 20px;
+    margin-bottom: 4em;
+}
+
+footer {
+    background: #212519;
+    text-align: center;
+    padding: 0.8em;
+    color: #fff;
+}
+
+
+.question{
+    margin: 2em;
+    font-size: 1.15em;
+}
+.answer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0px 0px 12px -1px rgba(0,0,0,0.70);
+    padding: 0.8em;
+    width: 60em;
+    margin: 2em auto;
+}
+
+.answer-letter{
+    font-size: 1.8em;
+}
+
