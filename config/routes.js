@@ -5,4 +5,6 @@ module.exports = (app) => {
     app.get("/question", controller.getQuestion);
     // this route is for testing only
     app.get("/question/:id", controller);
+    // another testing route
+    app.get("/about", controller);
 };
