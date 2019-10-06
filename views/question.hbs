@@ -52,7 +52,16 @@
                         maiores! Molestiae quas a aperiam vero. </p>
                 </div>
             </div>
+            <div id="explanation">
+                <h5>Explanation:</h5>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique fugit nihil dicta quae laboriosam
+                    voluptatum assumenda inventore autem quam aliquid sunt natus eligendi, totam consequuntur debitis.
+                    Hic autem iusto dolore.</p>
+            </div>
+            <button class="button">Next Question</button>
+        </section>
     </main>
+    <script src="/scripts/question.js"></script>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -67,32 +76,3 @@
         crossorigin="anonymous"></script>
 </div>
 <footer>All rights reserved</footer>
-<script>
-    let answers = document.getElementsByClassName("answer");
-    for (answer of answers) {
-        answer.addEventListener("click", checkCorrectness, true);
-    }
-    function checkCorrectness(info) {
-        console.log("HSA");
-        // rewrite this with classes
-        const id = info.srcElement.id;
-        if (id !== "true") {
-            let children = info.srcElement.children;
-            for (let i = 0; i < children.length; i++) {
-                children[i].style.color = "red";
-            }
-
-        }
-        // todo: disable the ability to click on more than one
-        for (answer of answers) {
-            if (answer.id === "true") {
-                let children = answer.children;
-                for (let i = 0; i < children.length; i++) {
-                    children[i].style.color = "green";
-                }
-                answer.removeEventListener("click", checkCorrectness);
-            }
-
-        }
-    }
-</script>
