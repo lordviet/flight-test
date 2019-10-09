@@ -1,0 +1,247 @@
+[
+  {
+    "Explanation": "Refer to figure 610.\r\nThe chart convergence remains the same on a Lambert chart, Earth convergence does not. Chart convergence is that of the parallel of origin and is constant on the chart. The convergence between two positions is the Change in Longitude × sine of the Parallel of origin. This value of convergence is also known as the Chart Convergence Factor (CCF). The value of chart convergence (CC) between any two meridians on the Lambert’s projection may be calculated in either of the following ways, depending what data are known:\r\n• CC (chart convergence) = Ch long × sin parallel of origin\r\n• CC (chart convergence) = Ch long × constant of the cone\r\n• CC (chart convergence) = Ch long × “n”\r\n• CC (chart convergence) = Ch long × Chart Convergence Factor (CCF)\r\n\r\nIt can be seen that each formula is basically the same as the constant of the cone = “n” = CCF = sin parallel of origin. Any of the values may be noted on the chart, or may be calculated from a knowledge of the standard parallels. ",
+    "Qfigure": null,
+    "Exfigure": "https://www.aviationexam.com/UI/Pages/ImageViewer.aspx?reqFig=27E69C38&explanation=1&idFto=0",
+    "Exfigure2": null,
+    "Exfigure3": null,
+    "QuestionId": "33051",
+    "QuestionContent": "On a Lambert conformal conic chart Earth convergence is most accurately represented at the:",
+    "Answers": [
+      {
+        "Content": "north and South limits of the chart. ",
+        "AnswerId": "tr_answer1",
+        "IsCorrect": false
+      },
+      {
+        "Content": "parallel of origin. ",
+        "AnswerId": "tr_answer2",
+        "IsCorrect": true
+      },
+      {
+        "Content": "standard parallels. ",
+        "AnswerId": "tr_answer3",
+        "IsCorrect": false
+      },
+      {
+        "Content": "equator. ",
+        "AnswerId": "tr_answer4",
+        "IsCorrect": false
+      }
+    ],
+    "Annexes": null,
+    "IsInExam": false,
+    "IsProblematic": false,
+    "Chapter": "0613_test"
+  },
+  {
+    "Explanation": "Refer to figure 610.\r\nThis question causes a lot of confusion because of its wording. A student reported that the wording was a bit different but he could not remember. We assume EASA has update this question so it should be clearer now but at the moment we are not sure about the exact wording. Please let us know if this question appears in your official exam and let us know if you remember the wording.\r\n\r\nTo answer this question...\r\nit is important to know that the scale of a Lambert chart changes: between the standard parallels: smaller\r\nat the parallel of origin: correct\r\noutside the standard parallels: larger\r\n...this means: If you measure a distance between the standard parallels, e.g. distance between latitude 48°N and 49°N = 10 cm (in reality: 60 NM), the same distance outside the standard parallels, e.g. between latitude 45°N and 46°N = 11 cm (in reality: also 60 NM). So the distance of 1° or 60 NM does not change, what changes is the measured distance - the distance you can see on your ruler (e.g. 10cm) and that's what the examiner is referring to.\r\n\r\n\r\nGeneral explanation\r\nScale on the Lambert’s projection is variable. It is constant along any parallel of latitude, however the scale varies with different parallels of latitude (with the exception of the standard parallels, where it is correct). Standard parallels are the latitudes where the cone cuts the reduced Earth. Along standard parallels, scale is the same as the Reduced Earth and is therefore correct along those parallels. The scale contracts between the standard parallels and expands outside them. By design, the rate of expansion and contraction is small and depends on the standard parallels chosen. The standard parallels are marked on the chart and often match the chart limits.\r\n\r\nNote: The scale quoted on a Lambert's chart is the scale at the standard parallels.\r\n\r\n...in other words\r\nThe distance between two parallels of latitude which are a given number of degrees apart from one another is a distance along a meridian (a great circle). It is a constant distance and does not depend on latitude.\r\n\r\nOn a Lambert chart, the specified scale is correct along the standard parallels. Between the standard parallels, the scale is smaller; the same distance on the surface of the Earth is condensed in a smaller chart distance - the representation of distance between the mentioned two parallels of latitude is smaller between the standard parallels than outside them.\r\n\r\n(This can be memorised when recalling how the chart is projected. The paper on which we project our Earth intersects with the surface of the Earth in the standard parallels; it is within the Earth’s sphere between the standard parallels and outside it from the standard parallels outwards. Therefore, between the standard parallels, the projection surface is closer to the light source in the geocentre and is less enlarged.)\r\n\r\nThe chart scale is also not constant between the standard parallels – it is smallest (and the parallels are depicted closest together) at the parallel of origin, although the change between the standard parallels is less than 1%. ",
+    "Qfigure": null,
+    "Exfigure": "https://www.aviationexam.com/UI/Pages/ImageViewer.aspx?reqFig=27E69C38&explanation=1&idFto=0",
+    "Exfigure2": null,
+    "Exfigure3": null,
+    "QuestionId": "58670",
+    "QuestionContent": "On a Lambert conformal conic chart the measured distance between parallels of latitude spaced the same number of degrees apart:",
+    "Answers": [
+      {
+        "Content": "expands between, and reduces outside, the standard parallels. ",
+        "AnswerId": "tr_answer1",
+        "IsCorrect": false
+      },
+      {
+        "Content": "is constant between, and expands outside, the standard parallels. ",
+        "AnswerId": "tr_answer2",
+        "IsCorrect": false
+      },
+      {
+        "Content": "reduces between, and expands outside, the standard parallels. ",
+        "AnswerId": "tr_answer3",
+        "IsCorrect": true
+      },
+      {
+        "Content": "is constant throughout the chart. ",
+        "AnswerId": "tr_answer4",
+        "IsCorrect": false
+      }
+    ],
+    "Annexes": null,
+    "IsInExam": false,
+    "IsProblematic": false,
+    "Chapter": "0613_test"
+  },
+  {
+    "Explanation": "Refer to figure 061-E_LO_1_Expl08.\r\nUse the Lat/Long information stated by the question to locate the SHA and CRK VORs on the chart. Probably the easiest way to draw the specific radials requested by the question is to use the existing radials (airways) as a reference and plot the requested radials as an angular reference to these airways. Let's start with the radial 120° from SHA VOR. We can choose an airway G1 which represents a radial 115° from SHA. The angular difference between 120° and 115° is 005° => we plot an angle of +005° to the airway G1 and obtain a radial 120° from SHA => we draw a straight line from the VOR symbol representing this radial. For the CRK VOR we can choose the airway W10 (radial 053°) => the requested radial from CRK VOR is 033° => the angular difference between 033° and 053° is 020° => we plot an angle of -020° to an airway W10 and obtain a radial 033° from CRK VOR => draw a straight line from the VOR symbol representing this radial. Now find the point where these two lines intersect and this is your position => approximately 52°30'N / 008°00'W. ",
+    "Qfigure": "https://www.aviationexam.com/UI/Pages/ImageViewer.aspx?reqFig=2FEE90&explanation=0&idFto=0",
+    "Exfigure": "https://www.aviationexam.com/UI/Pages/ImageViewer.aspx?reqFig=27E79337&explanation=1&idFto=0",
+    "Exfigure2": null,
+    "Exfigure3": null,
+    "QuestionId": "65384",
+    "QuestionContent": "Refer to figure 061-15.\r\nGiven:\r\n\r\n SHA VOR (52°43.3'N 008°53.1'W) radial 120°\r\n CRK VOR (51°50.4'N 008°29.7'W) radial 033°\r\n\r\n What is the aircraft position?",
+    "Answers": [
+      {
+        "Content": "52°30'N 008°00'W ",
+        "AnswerId": "tr_answer1",
+        "IsCorrect": true
+      },
+      {
+        "Content": "52°25'N 008°05'W ",
+        "AnswerId": "tr_answer2",
+        "IsCorrect": false
+      },
+      {
+        "Content": "52°20'N 007°50'W ",
+        "AnswerId": "tr_answer3",
+        "IsCorrect": false
+      },
+      {
+        "Content": "52°40'N 007°50'W ",
+        "AnswerId": "tr_answer4",
+        "IsCorrect": false
+      }
+    ],
+    "Annexes": null,
+    "IsInExam": false,
+    "IsProblematic": false,
+    "Chapter": "0613_test"
+  },
+  {
+    "Explanation": "Refer to figure 609.\r\n“Scale” is the relationship of the distance between two positions on a chart and the distance between the same positions on the Earth.\r\n• Scale = Chart length ÷ Earth distance\r\n\r\nIn our case, the distance on the chart is represented by 3.8 cm. The scale of the chart is 1 : 1 000 000 (1 cm on the chart = 1 000 000 cm in reality).\r\n• 1 cm on the chart = 1 000 000 cm in reality\r\n• 3.8 cm on the chart = 3 800 000 cm in reality\r\n• 3 800 000 cm = 38 km\r\n• 1 NM = 1.852 km\r\n• 38 km = 20.52 NM\r\n\r\nThe distance along the surface of the Earth will be approximately 20.5 NM. ",
+    "Qfigure": null,
+    "Exfigure": "https://www.aviationexam.com/UI/Pages/ImageViewer.aspx?reqFig=27E69C3A&explanation=1&idFto=0",
+    "Exfigure2": null,
+    "Exfigure3": null,
+    "QuestionId": "5789",
+    "QuestionContent": "A chart has the scale 1:1 000 000. From A to B on the chart measures 3.8 cm. The distance from A to B in NM is:",
+    "Answers": [
+      {
+        "Content": "70.4 ",
+        "AnswerId": "tr_answer1",
+        "IsCorrect": false
+      },
+      {
+        "Content": "38 ",
+        "AnswerId": "tr_answer2",
+        "IsCorrect": false
+      },
+      {
+        "Content": "20.5 ",
+        "AnswerId": "tr_answer3",
+        "IsCorrect": true
+      },
+      {
+        "Content": "205 ",
+        "AnswerId": "tr_answer4",
+        "IsCorrect": false
+      }
+    ],
+    "Annexes": null,
+    "IsInExam": false,
+    "IsProblematic": false,
+    "Chapter": "0613_test"
+  },
+  {
+    "Explanation": "The geographic term for the shape of the Earth is an ellipsoid (a three-dimensional ellipse) or an oblate spheroid as the Earth is not an exact sphere, as it is actually slightly compressed or flattened at the poles. This “squashed” shape is caused by the centrifugal effect of the rotation of the Earth. The navigational or geographic result of this “squashing” means that the length of a minute of latitude varies very slightly with the position on the Earth. One minute of latitude is equal to one nautical mile, the basic unit of distance in aviation navigation calculations. This compression is usually ignored when making maps, as a “reduced earth” or small scale model of the Earth is used, which treats the Earth as a perfect sphere for practical navigational purposes.\r\n\r\nThe WGS 84 standard (World Geodetic System 1984) is used currently for very precise navigation and mapping purposes. This standard, amongst other things, defines the ellipsoid which is currently accepted as the best “fit” for the overall shape of the Earth. When an ellipsoid is fixed at a particular orientation and position with respect to the Earth, it forms a so-called “Geodetic Datum”. WGS 84 is such a Geodetic Datum. Conventional surveying and projection techniques are then applied to the appropriate Geodetic Datum in order to produce a map. An ellipsoid itself is therefore insufficient to define a Geodetic Datum, the position and orientation of the ellipsoid to the Earth need to be defined also. All modern cartography and navigation systems are based on the WGS 84 system. ",
+    "Qfigure": null,
+    "Exfigure": null,
+    "Exfigure2": null,
+    "Exfigure3": null,
+    "QuestionId": "38337",
+    "QuestionContent": "The Earth has been charted using:",
+    "Answers": [
+      {
+        "Content": "WGP84 ",
+        "AnswerId": "tr_answer1",
+        "IsCorrect": false
+      },
+      {
+        "Content": "WGS84 ",
+        "AnswerId": "tr_answer2",
+        "IsCorrect": true
+      },
+      {
+        "Content": "GD84 ",
+        "AnswerId": "tr_answer3",
+        "IsCorrect": false
+      },
+      {
+        "Content": "GPS84 ",
+        "AnswerId": "tr_answer4",
+        "IsCorrect": false
+      }
+    ],
+    "Annexes": null,
+    "IsInExam": false,
+    "IsProblematic": false,
+    "Chapter": "0613_test"
+  },
+  {
+    "Explanation": "Refer to figure 448.\r\nNotice that the co-ordinates of the VOR and the aircraft share the same value of Longitude (036°13'W). That means the aircraft is due North of the VOR => on a True Bearing of 0° from the station. However, remember that the VOR radials are Magnetic bearings => therefore to obtain the Magnetic Bearing from a True Bearing we have to apply the value of Variation. When converting from True to Magnetic the mnemonic \"West is Best, East is Least\" is applicable => with Westerly variation we would add the variation => in our case the Magnetic Bearing (radial) would be 0° True Bearing + 12° Westerly Variation = 012°. The aircraft is on 012° radial from the VOR. ",
+    "Qfigure": null,
+    "Exfigure": "https://www.aviationexam.com/UI/Pages/ImageViewer.aspx?reqFig=20E6903D&explanation=1&idFto=0",
+    "Exfigure2": null,
+    "Exfigure3": null,
+    "QuestionId": "16672",
+    "QuestionContent": "An aircraft is at 55°30'N 036°13'W, where the variation is 15W. It is tuned to a VOR located at 53°30'N 036°13'W, where the variation is 12°W. What VOR radial is the aircraft on?",
+    "Answers": [
+      {
+        "Content": "348 ",
+        "AnswerId": "tr_answer1",
+        "IsCorrect": false
+      },
+      {
+        "Content": "012 ",
+        "AnswerId": "tr_answer2",
+        "IsCorrect": true
+      },
+      {
+        "Content": "165 ",
+        "AnswerId": "tr_answer3",
+        "IsCorrect": false
+      },
+      {
+        "Content": "360 ",
+        "AnswerId": "tr_answer4",
+        "IsCorrect": false
+      }
+    ],
+    "Annexes": null,
+    "IsInExam": false,
+    "IsProblematic": false,
+    "Chapter": "0613_test"
+  },
+  {
+    "Explanation": "Refer to figure 610.\r\nThe chart convergence remains the same on a Lambert chart, Earth convergence does not. Chart convergence is that of the parallel of origin and is constant on the chart. The convergence between two positions is the Change in Longitude × sine of the Parallel of origin. This value of convergence is also known as the Chart Convergence Factor (CCF). The value of chart convergence (CC) between any two meridians on the Lambert’s projection may be calculated in either of the following ways, depending what data are known:\r\n• CC (chart convergence) = Ch long × sin parallel of origin\r\n• CC (chart convergence) = Ch long × constant of the cone\r\n• CC (chart convergence) = Ch long × “n”\r\n• CC (chart convergence) = Ch long × Chart Convergence Factor (CCF)\r\n\r\nIt can be seen that each formula is basically the same as the constant of the cone = “n” = CCF = sin parallel of origin. Any of the values may be noted on the chart, or may be calculated from a knowledge of the standard parallels. ",
+    "Qfigure": null,
+    "Exfigure": "https://www.aviationexam.com/UI/Pages/ImageViewer.aspx?reqFig=27E69C38&explanation=1&idFto=0",
+    "Exfigure2": null,
+    "Exfigure3": null,
+    "QuestionId": "25271",
+    "QuestionContent": "A straight line is drawn on a Lambert's conformal conic chart between two positions of different longitude. The angular difference between the initial true track and the final true track of the line is equal to:",
+    "Answers": [
+      {
+        "Content": "Earth convergence. ",
+        "AnswerId": "tr_answer1",
+        "IsCorrect": false
+      },
+      {
+        "Content": "chart convergence. ",
+        "AnswerId": "tr_answer2",
+        "IsCorrect": true
+      },
+      {
+        "Content": "conversion angle. ",
+        "AnswerId": "tr_answer3",
+        "IsCorrect": false
+      },
+      {
+        "Content": "difference in longitude. ",
+        "AnswerId": "tr_answer4",
+        "IsCorrect": false
+      }
+    ],
+    "Annexes": null,
+    "IsInExam": false,
+    "IsProblematic": false,
+    "Chapter": "0613_test"
+  }
+]

@@ -13,10 +13,10 @@ html {
 }
 
 .wrapper {
-    max-width: 1400px;
+    max-width: 1450px;
     margin: 0 auto;
     height: 100%;
-    background: black;
+    background: #fff;
 }
 
 .banner {
@@ -63,23 +63,32 @@ footer {
     color: #fff;
 }
 
-
-.question{
+.question {
     margin: 2em;
     font-size: 1.15em;
 }
+
 .answer {
     display: flex;
     justify-content: space-around;
     align-items: center;
     background-color: #fff;
-    box-shadow: 0px 0px 12px -1px rgba(0,0,0,0.70);
+    box-shadow: 0px 0px 12px -1px rgba(0, 0, 0, 0.70);
     padding: 0.8em;
     width: 60em;
     margin: 2em auto;
 }
 
-.answer-letter{
+.answer-letter {
     font-size: 1.8em;
 }
 
+#explanation {
+    display: none;
+    width: 65%;
+    margin: 0 auto;
+}
+
+#explanation>h4 {
+    margin: 1em;
+}
