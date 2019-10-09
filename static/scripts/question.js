@@ -1,9 +1,9 @@
-console.log("Hey")
 const checkCorrectness = (info) => {
     const id = info.srcElement.id;
     if (id !== "true") {
         let children = info.srcElement.children;
         for (let i = 0; i < children.length; i++) {
+            // CHeck this
             children[i].style.color = "red";
         }
 
@@ -18,7 +18,7 @@ const checkCorrectness = (info) => {
         }
         answer.removeEventListener("click", checkCorrectness);
     }
-    const explanation = document.getElementById("explanation");
+    let explanation = document.getElementById("explanation");
     explanation.style.display = "block";
 }
 

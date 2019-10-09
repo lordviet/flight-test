@@ -1,42 +1,22 @@
 <main>
     <section class="questionnaire">
-        <p class="question">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus consectetur
-            fuga?</p>
-        <div class="answers">
-            <div class="answer" id="true">
-                <p class="answer-letter">A</p>
-                <!-- This id shold be dynamic-->
-                <p class="answer-content">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Dignissimos,
-                    maiores! Molestiae quas a aperiam vero. </p>
+        {{#each questions}}
+        <section class="questionnaire">
+            <p id="{{this.QuestionId}}" class="question">{{this.QuestionContent}}</p>
+            {{#each this.Answers}}
+            <div class="answers">
+                <div class="answer" id="{{this.IsCorrect}}">
+                    {{!-- <p class="answer-letter">A</p> --}}
+                    <p class="answer-content">{{this.Content}}</p>
+                </div>
             </div>
-            <div class="answer" id="false">
-                <p class="answer-letter">B</p>
-                <p class="answer-content">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Dignissimos,
-                    maiores! Molestiae quas a aperiam vero. </p>
+            {{/each}}
+            <div id="explanation">
+                <h5>Explanation:</h5>
+                <p>{{this.Explanation}}</p>
             </div>
-            <div class="answer" id="false">
-                <p class="answer-letter">C</p>
-                <p class="answer-content">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Dignissimos,
-                    maiores! Molestiae quas a aperiam vero. </p>
-            </div>
-            <div class="answer" id="false">
-                <p class="answer-letter">D</p>
-                <p class="answer-content">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Dignissimos,
-                    maiores! Molestiae quas a aperiam vero. </p>
-            </div>
-        </div>
-        <div id="explanation">
-            <h5>Explanation:</h5>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique fugit nihil dicta quae laboriosam
-                voluptatum assumenda inventore autem quam aliquid sunt natus eligendi, totam consequuntur debitis.
-                Hic autem iusto dolore.</p>
-        </div>
-        <button class="button">Next Question</button>
-    </section>
+            <button class="button">Next Question</button>
+            {{/each}}
+        </section>
 </main>
 <script src="/scripts/question.js"></script>
-
