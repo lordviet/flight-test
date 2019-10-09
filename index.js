@@ -1,8 +1,23 @@
-const env = process.env.NODE_ENV || 'development';
-const config = require('./config/config')[env];
-const app = require('express')();
-require('./config/express')(app);
-require('./config/routes')(app);
+const dbConnector = require('./config/db');
+
+dbConnector().then(() => {
+    const config = require('./config/config');
+
+    const app = require('express')();
+
+    require('./config/express')(app);
+    require('./config/routes')(app);
+
+    app.listen(config.port, console.log(`Listening on port ${config.port}`));
+}).catch(console.error);
 
 
-app.listen(config.port, console.log(`Listening on port ${config.port}!`));
+
+
+// const config = require('./config/config')[env];
+// const app = require('express')();
+// require('./config/express')(app);
+// require('./config/routes')(app);
+
+
+// app.listen(config.port, console.log(`Listening on port ${config.port}!`));
