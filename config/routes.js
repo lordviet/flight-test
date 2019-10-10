@@ -1,7 +1,7 @@
 const controller = require('../controllers/flightTest-controller');
 
 module.exports = (app) => {
-    app.get("/", controller.getIndex);
+    
     app.get("/question", controller.getQuestion);
 
     app.get("/register", controller.getRegister);
@@ -11,6 +11,7 @@ module.exports = (app) => {
     app.post("/login", controller.postLogin);
 
     app.get("/logout", controller.logout);
+    app.get("/", controller.getIndex);
     // this route is for testing only
     // app.get("/question/:id", controller);
     // another testing route

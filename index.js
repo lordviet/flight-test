@@ -1,4 +1,5 @@
 const dbConnector = require('./config/db');
+global.__basedir = __dirname;
 
 dbConnector().then(() => {
     const config = require('./config/config');

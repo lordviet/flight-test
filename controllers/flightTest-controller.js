@@ -8,8 +8,19 @@ const jwtConfig = require('../config/jwt');
 
 
 module.exports = {
-    getIndex: function (req, res) {
-        return res.render("index");
+    getIndex: function (req, res, next) {
+        const token = req.cookies['auth_cookie'];
+        if (!token) { return res.render('index'); }
+
+        const data = jwt.verify(token, jwtConfig.secret);
+
+        userModel.findOne({ _id: data.userId}).then(authUser => {
+            if (!authUser) { res.status(401).send('please log in'); return; }
+
+            req.user = authUser;
+
+            return res.render('index', { isAuth: token !== null ? true : false, username: req.user.username });
+        }); 
     },
     getQuestion: function (req, res) {
         // res.send(questions);
@@ -48,15 +59,15 @@ module.exports = {
                             res.redirect("/");
                             return;
                         }
-                        const token = jwt.sign({ userId: authUser.id}, jwtConfig.secret, jwtConfig.options);
 
-                        //da se vkarat jwt i cookies
-                        console.log('stana li????');
-                        res.cookie('auth_cookie', token).redirect("/vlezee");
+                        // sign() generates a new token
+                        const token = jwt.sign({ userId: authUser._id}, jwtConfig.secret, jwtConfig.options);
+
+                        res.cookie('auth_cookie', token).redirect('/');
                 })
             });
     },
     logout: function(req, res) {
         res.clearCookie('auth_cookie').redirect('/');
-    }
+    },
 }
