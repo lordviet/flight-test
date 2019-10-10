@@ -1,6 +1,8 @@
 const bcrypt = require("bcrypt");
+const jwt = require('jsonwebtoken');
 const questions = require("../config/samples");
 const userModel = require("../models/user");
+const jwtConfig = require('../config/jwt');
 
 // const tests = require("../config/database.json");
 
@@ -46,21 +48,15 @@ module.exports = {
                             res.redirect("/");
                             return;
                         }
+                        const token = jwt.sign({ userId: authUser.id}, jwtConfig.secret, jwtConfig.options);
 
                         //da se vkarat jwt i cookies
                         console.log('stana li????');
-                        res.redirect("/vlezee");
+                        res.cookie('auth_cookie', token).redirect("/vlezee");
                 })
             });
-    }
-}
-
-function authenticate(err, result) {
-    if (err) { console.error(err); return; }
-
-    if (null !== result) {
-        return true;
-    } else {
-        return false;
+    },
+    logout: function(req, res) {
+        res.clearCookie('auth_cookie').redirect('/');
     }
 }

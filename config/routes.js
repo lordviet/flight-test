@@ -9,6 +9,8 @@ module.exports = (app) => {
 
     app.get("/login", controller.getLogin);
     app.post("/login", controller.postLogin);
+
+    app.get("/logout", controller.logout);
     // this route is for testing only
     // app.get("/question/:id", controller);
     // another testing route
