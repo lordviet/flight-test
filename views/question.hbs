@@ -1,22 +1,22 @@
 <main>
     <section class="questionnaire">
         {{#each questions}}
-        <section class="questionnaire">
-            <p id="{{this.QuestionId}}" class="question">{{this.QuestionContent}}</p>
-            {{#each this.Answers}}
+        <div id="{{this.QuestionId}}" class="questionInfo">
+            <p class="question">{{this.QuestionContent}}</p>
             <div class="answers">
+                {{#each this.Answers}}
                 <div class="answer" id="{{this.IsCorrect}}">
-                    {{!-- <p class="answer-letter">A</p> --}}
                     <p class="answer-content">{{this.Content}}</p>
                 </div>
+                {{/each}}
             </div>
-            {{/each}}
             <div id="explanation">
                 <h5>Explanation:</h5>
                 <p>{{this.Explanation}}</p>
             </div>
             <button class="button">Next Question</button>
-            {{/each}}
-        </section>
+        </div>
+        {{/each}}
+    </section>
 </main>
 <script src="/scripts/question.js"></script>

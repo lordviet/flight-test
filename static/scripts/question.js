@@ -1,29 +1,29 @@
-const checkCorrectness = (info) => {
-    const id = info.srcElement.id;
-    if (id !== "true") {
-        let children = info.srcElement.children;
-        for (let i = 0; i < children.length; i++) {
-            // CHeck this
-            children[i].style.color = "red";
-        }
+const checkCorrectness = (event) => {
+    const clickedAnswer = event.target;
+    const answerIsTrue = clickedAnswer.id === "true" ? true : false;
+    const questionId = $(event.target).parent().parent()[0].id;
 
+    if (answerIsTrue) {
+        $(clickedAnswer).children().css("color", "green");
     }
-    let answers = document.getElementsByClassName("answer");
-    for (answer of answers) {
-        if (answer.id === "true") {
-            let children = answer.children;
-            for (let i = 0; i < children.length; i++) {
-                children[i].style.color = "green";
-            }
-        }
-        answer.removeEventListener("click", checkCorrectness);
+    else{
+        $(clickedAnswer).children().css("color", "red");
+        $(clickedAnswer).siblings("#true").css("color", "green");
     }
-    let explanation = document.getElementById("explanation");
-    explanation.style.display = "block";
+
+    $(`#${questionId} div.answer`)
+        .toArray()
+        .forEach(question => {
+            $(question).unbind("click", checkCorrectness);
+        });
+
+    $(`#${questionId} #explanation`).css("display", "block");
+
 }
 
-let answers = document.getElementsByClassName("answer");
+let questions = [...document.getElementsByClassName("questionInfo")];
 
-for (answer of answers) {
-    answer.addEventListener("click", checkCorrectness);
+for (let question of questions) {
+    $(`#${question.id} div.answer`).on("click", checkCorrectness);
 }
+
