@@ -1,6 +1,4 @@
-const jwt = require("jsonwebtoken");
 const questions = require("../config/samples");
-const userModel = require("../models/user");
 const jwtConfig = require("../utils/jwt");
 
 // const tests = require("../config/database.json");
