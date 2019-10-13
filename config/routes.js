@@ -13,7 +13,7 @@ module.exports = (app) => {
 
     app.get("/logout", userController.logout);
     app.get("/", testController.getIndex);
-
+    app.get("*", testController.getNotFound);
     // Add 404 page
     // this route is for testing only
     // app.get("/question/:id", controller);

@@ -23,5 +23,8 @@ module.exports = {
     getQuestion: function (req, res) {
         // we should check the footer
         return res.render("question", { questions });
+    },
+    getNotFound: function(req, res){
+        return res.render("404");
     }
 }
