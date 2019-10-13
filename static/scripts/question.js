@@ -47,7 +47,9 @@ function allQuestionsAreAnswered(numberOfQuestions, numberOfClicks) {
 }
 
 function showFinalScore(correctAnswers, numberOfQuestions) {
-    $("h3.score").text(`You have ${correctAnswers} correct answers out of ${numberOfQuestions} questions`);
+    $("h3.score")
+        .show()
+        .text(`You have ${correctAnswers} correct answers out of ${numberOfQuestions} questions`);
 }
 
 // TODO Hide the ids of the questions, maybe hash the id everytime
