@@ -68,6 +68,17 @@ footer {
     font-size: 1.15em;
 }
 
+.questionInfo {
+    display: none;
+    transition: opacity 1s ease-out;
+    opacity: 0;
+}
+
+.nextQuestion {
+    opacity: 1;
+    display: block;
+}
+
 .answer {
     display: flex;
     justify-content: space-around;
@@ -89,6 +100,7 @@ footer {
     margin: 1em;
 }
 
-.score{
+.score {
+    display: none;
     margin: 1em;
 }
