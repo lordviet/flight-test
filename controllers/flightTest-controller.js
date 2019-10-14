@@ -3,9 +3,9 @@ const jwtConfig = require("../utils/jwt");
 
 // const tests = require("../config/database.json");
 
-
 module.exports = {
     getIndex: function (req, res, next) {
+        const user = req.user;
         // const token = req.cookies["auth_cookie"];
         // if (!token) { return res.render("index"); }
 
@@ -18,11 +18,11 @@ module.exports = {
 
         //     return res.render("index", { isAuth: token !== null ? true : false, username: req.user.username });
         // });
-        return res.render("index");
+        return res.render("index", { user });
     },
     getQuestion: function (req, res) {
         // we should check the footer
-        return res.render("question", { questions });
+        return res.render("question", { questions, user: req.user });
     },
     getNotFound: function(req, res){
         return res.render("404");
