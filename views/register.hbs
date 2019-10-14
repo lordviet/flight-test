@@ -4,6 +4,9 @@
             <label for="username">Username</label>
             <input type="text" class="form-control" id="username" placeholder="Enter username" name="username">
         </div>
+        {{#if errors.username}}
+            <div class="error">{{ errors.username }}</div>
+        {{/if}}
         <div class="form-group">
             <label for="password">Password</label>
             <input type="password" class="form-control" id="password" placeholder="Password" name="password">
@@ -12,6 +15,9 @@
             <label for="password">Repeat Password</label>
             <input type="password" class="form-control" id="password" placeholder="Repeat Password" name="repeatPassword">
         </div>
+        {{#if errors.repeatPassword}}
+            <div class="error">{{ errors.repeatPassword }}</div>
+        {{/if}}
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 </section>
