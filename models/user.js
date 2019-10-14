@@ -13,7 +13,7 @@ const userSchema = new mongoose.Schema({
         required: true,
         validate: {
             validator: function(v) {
-                return /^[^\n]{6,}$/.test(v);
+                return /^[^\n]{3,}$/.test(v);
             },
             message: pass => `${pass.value} is not a valid password!`
         }
