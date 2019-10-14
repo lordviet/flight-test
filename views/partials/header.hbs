@@ -7,7 +7,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
-                {{#if isAuth}}
+                {{#if user}}
                 <li class="nav-item">
                     <a class="nav-link" href="/question">Start test</a>
                 </li>
@@ -15,7 +15,7 @@
                     <a class="nav-link" href="#">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Hello, {{username}}</a>
+                    <a class="nav-link" href="#">Hello, {{user.username}}</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/logout">Logout</a>
