@@ -1,8 +1,6 @@
 const models = require("../models");
 const utils = require("../utils");
 const appConfig = require("../app-config");
-const bcrypt = require("bcrypt");
-const saltRounds = 10;
 
 module.exports = {
     getRegister: function (req, res) {
@@ -11,19 +9,27 @@ module.exports = {
     postRegister: function (req, res, next) {
         const { username, password, repeatPassword } = req.body;
         if (password !== repeatPassword) {
-            return res.status(400).send("Password must match repeat password");
-        }
-        bcrypt.hash(password, saltRounds, (err, hash) => {
-            if (err) { next(err); return; }
-
-            models.userModel.create({ username, password: hash }).then(() => {
-                res.redirect("/login");
-            }).catch(err => {
-                if (err.name === 'MongoError' && err.code === 11000) {
-                    return res.status(400).send("Username already taken");
+            res.render("register.hbs", {
+                errors: {
+                    repeatPassword: 'Passwords must be the same!'
                 }
             });
-        })
+            return;
+        }
+
+        return models.userModel.create({ username, password }).then(() => {
+            res.redirect("/login");
+        }).catch(err => {
+            if (err.name === 'MongoError' && err.code === 11000) {
+                res.render("register.hbs", {
+                    errors: {
+                        username: 'Username already exists!'
+                    }
+                });
+                return;
+            }
+            next();
+        });
     },
     getLogin: function (req, res) {
         return res.render("login");
