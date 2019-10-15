@@ -3,10 +3,11 @@ const nextBtn = $("#next");
 const allQuestions = $("div.questionInfo");
 let currentQuestion = 0;
 
-console.log(allQuestions.length)
-
 // Adding the class to start the pagination
 $(allQuestions[0]).addClass("nextQuestion");
+
+// At first the previousBtn should be hidden
+previousBtn.hide();
 
 function showQuestion(nextQuestion) {
     $(allQuestions[currentQuestion]).removeClass("nextQuestion");
