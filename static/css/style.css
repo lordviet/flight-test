@@ -44,16 +44,26 @@ h1 {
     margin-bottom: 2rem;
 }
 
-.button {
+.button, .buttonLink {
     background: #212519;
     border: none;
     color: #fff;
     font-weight: 700;
-    font-size: 17px;
+    font-size: 1.15em;
     border-radius: 5%;
     padding: 0.7em 1em;
-    margin: 20px;
-    margin-bottom: 4em;
+    margin: 1.5em;
+}
+
+.buttonLink{
+    display: block;
+    width: 170px;
+    margin: 3em auto;
+}
+
+.buttonLink:hover{
+    text-decoration: none;
+    color: #fff;
 }
 
 footer {
@@ -104,3 +114,4 @@ footer {
     display: none;
     margin: 1em;
 }
+
