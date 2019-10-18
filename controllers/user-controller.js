@@ -37,7 +37,7 @@ module.exports = {
     postLogin: function (req, res, next) {
         const { username, password } = req.body;
         models.userModel.findOne({ username })
-            .then(user => Promise.all([user, user.matchPassword(password)]))
+            .then(user => Promise.all([user, user ? user.matchPassword(password) : false]))
             .then(([user, match]) => {
                 if (!match) {
                     res.render("login.hbs", { message: 'Wrong username or password'});
