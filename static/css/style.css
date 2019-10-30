@@ -55,13 +55,13 @@ h1 {
     margin: 1.5em;
 }
 
-.buttonLink{
+.buttonLink {
     display: block;
     width: 170px;
     margin: 3em auto;
 }
 
-.buttonLink:hover{
+.buttonLink:hover {
     text-decoration: none;
     color: #fff;
 }
@@ -115,3 +115,21 @@ footer {
     margin: 1em;
 }
 
+.categories {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.category {
+    flex-basis: 30%;
+    border: 1.5px solid #212519;
+    border-radius: 5%;
+    margin: 2em 0em;
+}
+
+.category>h2 {
+    padding: 0.5em;
+}

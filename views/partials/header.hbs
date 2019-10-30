@@ -9,10 +9,10 @@
             <ul class="navbar-nav">
                 {{#if user}}
                 <li class="nav-item">
-                    <a class="nav-link" href="/question">Start test</a>
+                    <a class="nav-link" href="/categories">Start test</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
+                    <a class="nav-link" href="/categories">About</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Hello, {{user.username}}</a>
@@ -21,6 +21,9 @@
                     <a class="nav-link" href="/logout">Logout</a>
                 </li>
                 {{else}}
+                <li class="nav-item">
+                    <a class="nav-link" href="/question">Demo test</a>
+                </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/login">Login</a>
                 </li>

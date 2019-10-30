@@ -21,10 +21,15 @@ module.exports = {
         return res.render("index", { user });
     },
     getQuestion: function (req, res) {
-        // we should check the footer
+        // if user is logged in, show real questions
+        // if not show demo question
         return res.render("question", { questions, user: req.user });
     },
-    getNotFound: function(req, res){
+    getCategories: function (req, res) {
+        return res.render("categories", {user: req.user});
+    },
+
+    getNotFound: function (req, res) {
         return res.render("404");
     }
 }
