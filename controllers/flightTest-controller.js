@@ -1,4 +1,4 @@
-const questions = require("../config/samples");
+const demoQuestions = require("../config/samples");
 const jwtConfig = require("../utils/jwt");
 
 // const tests = require("../config/database.json");
@@ -23,10 +23,15 @@ module.exports = {
     getQuestion: function (req, res) {
         // if user is logged in, show real questions
         // if not show demo question
-        return res.render("question", { questions, user: req.user });
+        const user = req.user;
+        if (!user) {
+            return res.render("question", { questions: demoQuestions });
+        }
+        return res.render("question", { user });
+
     },
     getCategories: function (req, res) {
-        return res.render("categories", {user: req.user});
+        return res.render("categories", { user: req.user });
     },
 
     getNotFound: function (req, res) {

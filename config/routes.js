@@ -4,7 +4,7 @@ const { auth } = require('../utils');
 
 module.exports = (app) => {
     
-    app.get("/question", auth(false), testController.getQuestion);
+    app.get("/question/:id", auth(false), testController.getQuestion);
     app.get("/categories", auth(), testController.getCategories);
 
     app.get("/register", auth(false), userController.getRegister);
