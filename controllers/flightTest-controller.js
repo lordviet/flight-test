@@ -1,34 +1,30 @@
+const models = require("../models")
 const demoQuestions = require("../config/samples");
-const jwtConfig = require("../utils/jwt");
-
-// const tests = require("../config/database.json");
 
 module.exports = {
     getIndex: function (req, res, next) {
         const user = req.user;
-        // const token = req.cookies["auth_cookie"];
-        // if (!token) { return res.render("index"); }
-
-        // const data = jwt.verify(token, jwtConfig.secret);
-
-        // userModel.findOne({ _id: data.userId }).then(authUser => {
-        //     if (!authUser) { res.status(401).send("please log in"); return; }
-
-        //     req.user = authUser;
-
-        //     return res.render("index", { isAuth: token !== null ? true : false, username: req.user.username });
-        // });
         return res.render("index", { user });
     },
     getQuestion: function (req, res) {
         // if user is logged in, show real questions
         // if not show demo question
+    
         const user = req.user;
         if (!user) {
             return res.render("question", { questions: demoQuestions });
         }
-        return res.render("question", { user });
 
+        // Chapter : should be whatever the user adds as an input
+        // limit should be the number of questions the user wants
+
+        models.questionModel
+            .find({ "Chapter": "040" })
+            .limit(2)
+            .then(questions => {
+                console.log(questions);
+                return res.render("question", { user });
+            });
     },
     getCategories: function (req, res) {
         return res.render("categories", { user: req.user });
