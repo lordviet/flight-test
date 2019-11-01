@@ -9,21 +9,23 @@ module.exports = {
     getQuestion: function (req, res) {
         // if user is logged in, show real questions
         // if not show demo question
-    
+
         const user = req.user;
         if (!user) {
             return res.render("question", { questions: demoQuestions });
         }
 
-        // Chapter : should be whatever the user adds as an input
+        const category = req.params.category;
         // limit should be the number of questions the user wants
 
         models.questionModel
-            .find({ "Chapter": "040" })
-            .limit(2)
+            .find({ "Chapter": category })
+            .limit(7)
             .then(questions => {
-                console.log(questions);
-                return res.render("question", { user });
+                return res.render("question", { user, questions });
+            })
+            .catch(err => {
+                console.log(err);
             });
     },
     getCategories: function (req, res) {
