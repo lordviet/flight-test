@@ -18,6 +18,8 @@ module.exports = {
         const category = req.params.category;
         // limit should be the number of questions the user wants
 
+        const category = req.params.category;
+
         models.questionModel
             .find({ "Chapter": category })
             .limit(7)

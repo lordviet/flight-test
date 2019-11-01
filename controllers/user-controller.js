@@ -43,7 +43,7 @@ module.exports = {
                     res.render("login.hbs", { message: 'Wrong username or password'});
                     return;
                 }
-
+                
                 const token = utils.jwt.createToken({id: user._id});
                 res.cookie(appConfig.authCookieName, token).redirect("/");
             });

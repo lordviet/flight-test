@@ -39,6 +39,7 @@ const questionSchema = new mongoose.Schema({
     Chapter: {
         type: String
     }
-})
+});
 
 module.exports = mongoose.model("Question", questionSchema, "questions");
+
