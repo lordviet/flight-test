@@ -18,13 +18,15 @@ module.exports = {
         // Chapter : should be whatever the user adds as an input
         // limit should be the number of questions the user wants
 
+        const category = req.params.category;
+
         models.questionModel
-            .find({ "Chapter": "040" })
+            .find({ "Chapter": category })
             .limit(2)
             .then(questions => {
-                console.log(questions);
-                return res.render("question", { user });
-            });
+                console.log(questions)
+                return res.render("question", { questions, user });
+            }).catch(console.error);
     },
     getCategories: function (req, res) {
         return res.render("categories", { user: req.user });
